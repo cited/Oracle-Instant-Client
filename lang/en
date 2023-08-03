@@ -1,0 +1,71 @@
+index_title=Oracle Instant Client
+index_root=The root directory is $1.
+
+index_return=Oracle Instant Client
+
+manual_title=Edit config
+manual_ecannot=You are not allowed to edit the Tomcat server.xml config file
+manual_ok=Edit
+manual_efile=Selected file is not part of the Tomcat server configuration
+manual_file=Edit config file:
+manual_edata=Nothing entered!
+manual_err=Failed to save config file
+
+install_button=Install
+install_title=Installing ...
+install_err1=Invalid URL
+install_err2=Failed to install uploaded module
+install_err3=Failed to install module from $1
+install_efile=File does not exist
+install_ebrowser=Your browser does not support file uploads
+
+java_title=Oracle Java 8
+java_tabinstall=Install
+java_tabuninstall=Uninstall
+java_desc1=Install Oracle Java 8 from an archive(tar.gz)
+java_desc2=Uninstall Oracle Java 8 files from /usr/share
+java_install=Install Oracle Java SDK/JRE 8
+java_uninstall=Uninstall Oracle Java SDK/JRE 8
+jdk_installsource=Oracle JDK source (.tar.gz)
+jdk_latest=Latest JDK Version
+java_installok=Install
+java_deleteok=Uninstall
+java_def_jdk=Set as system default Java
+java_rm_def_jdk=Remove, if default Java
+java_installed=JDK versions
+
+source_local=Local file
+source_uploaded=Uploaded file
+source_ftp=FTP or HTTP URL
+
+source_err0=File Error
+source_err1=Upload Error
+source_err1.2=No upload file
+source_err2=Download error
+source_err3=Invalid URL
+
+oci_title=Oracle Instant Client
+oci_install=Select version and packages
+oci_version=Version
+oci_packages=Packages
+
+php_title=PHP
+php_inst_title=Manage PHP packages
+php_inst_edit=PHP Packages
+php_inst_save=Update
+php_versions=PHP Versions
+
+pg_ext_title=Extensions
+pg_ext_edit=Edit PostgreSQL extensions
+pg_ext_save=Save
+pg_ext_enabled=Enabled
+pg_ext_disabled=Disabled
+pg_ext_database=Database
+
+pg_inst_title=PG Installer
+pg_inst_edit=Edit PostgreSQL packages
+pg_versions=Supported Versions
+pg_inst_save=Update
+pg_repo_install=Install repo
+pg_enable_ssl=Enable SSL
+pg_listen_all=Listen on all interfaces
