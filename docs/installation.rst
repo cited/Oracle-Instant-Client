@@ -1,38 +1,34 @@
 Installation and Usage
 ===========================
 
-This script is for building a basic tile server with OpenStreetMap data.
+This module is installing and configuring Oracle Instant Client
 
-For us only on a clean Ubuntu 20 install.
-
-Be sure to review the "Using SSL" section below if you plan to enable SSL.
+The module can be used on a new or existing Webmin installation
 
 Installation
 ------------
 
-Step 1: Get opentileserver.sh script from GitHub::
+Step 1: Get the repo from Github::
 
-    wget https://raw.githubusercontent.com/AcuGIS/OpenTileServer/master/opentileserver-ubuntu-20.sh
+    git clone https://github.com/cited/Oracle-Instant-Client.git
 
-Step 2: Make it executable::
+Step 2: Change name::
 
-    $ chmod 755 opentileserver-ubuntu-20.sh
+    mv webmin_oci-master oci
 
-Step 3 (for non-Latin alphabet)
+Step 4 Create the Webmin tar.gz file::
 
-If using a non-Latin alphabet, ucomment line 24 below if needed::
+    tar -cvzf oci.wbm.gz oci/
 
-    $ export LC_ALL=C
+Step 5: Install the module::
 
-Step 4: Run the script::
+    /usr/share/webmin/install.pl oci.wbm.gz
 
-$ ./opentileserver-ubuntu-20.sh  [web|ssl] [bright|carto] pbf_url
-
-Options
+Wizard
 -------   
-    
-::
 
+Once the module is installed, go to Servers >> Oracle Instant Client and click through the Wizard::
+    
     [web|ssl]: 'web' for http and 'ssl' for https
     [bright|carto]: 'carto' for openstreetmap-carto or 'bright' for openstreetmap-bright
     pbf_url: Complete PBF url from GeoFabrik (or other source)
