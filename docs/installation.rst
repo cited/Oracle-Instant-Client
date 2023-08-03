@@ -1,115 +1,61 @@
 Installation and Usage
 ===========================
 
-This script is for building a basic tile server with OpenStreetMap data.
+This module is installing and configuring Oracle Instant Client
 
-For us only on a clean Ubuntu 20 install.
-
-Be sure to review the "Using SSL" section below if you plan to enable SSL.
+The module can be used on a new or existing Webmin installation
 
 Installation
 ------------
 
-Step 1: Get opentileserver.sh script from GitHub::
+Step 1: Get the repo from Github::
 
-    wget https://raw.githubusercontent.com/AcuGIS/OpenTileServer/master/opentileserver-ubuntu-20.sh
+    git clone https://github.com/cited/Oracle-Instant-Client.git
 
-Step 2: Make it executable::
+Step 2: Change name::
 
-    $ chmod 755 opentileserver-ubuntu-20.sh
+    mv webmin_oci-master oci
 
-Step 3 (for non-Latin alphabet)
+Step 4 Create the Webmin tar.gz file::
 
-If using a non-Latin alphabet, ucomment line 24 below if needed::
+    tar -cvzf oci.wbm.gz oci/
 
-    $ export LC_ALL=C
+Step 5: Install the module::
 
-Step 4: Run the script::
+    /usr/share/webmin/install.pl oci.wbm.gz
 
-$ ./opentileserver-ubuntu-20.sh  [web|ssl] [bright|carto] pbf_url
-
-Options
+Wizard
 -------   
-    
-::
 
-    [web|ssl]: 'web' for http and 'ssl' for https
-    [bright|carto]: 'carto' for openstreetmap-carto or 'bright' for openstreetmap-bright
-    pbf_url: Complete PBF url from GeoFabrik (or other source)
+Once the module is installed, go to Servers >> Oracle Instant Client and click through the Wizard
 
-Examples
------------
+.. image:: _static/5.png
 
-Load Delaware data with openstreetmap-carto style and no SSL::
+Select the packages to install
 
-    $ ./opentileserver-ubuntu-20.sh web carto http://download.geofabrik.de/north-america/us/delaware-latest.osm.pbf 
+.. image:: _static/6.png
 
-Load Bulgaria data with openstreetmap-bright style and SSL::
-    
-    $ ./opentileserver-ubuntu-20.sh http://download.geofabrik.de/europe/bulgaria-latest.osm.pbf bright
+Once completed, the panel should look like below:
 
-Load South America data with openstreetmap-carto style and SSL::
-
-    $ ./opentileserver-ubuntu-20.sh ssl carto http://download.geofabrik.de/south-america-latest.osm.pbf
+.. image:: _static/7.png
 
 
-Using SSL
+SQL Plus
 -----------------
 
-If you select the ssl option and wish to use LetsEncrypt, be sure to do the following:
+If you selected SQLPlus, you can test functionality via the Webmin terminal app:
 
-1.  Check hostname is set properly.  You can set the hostname using hostnamectl as below::
+.. image:: _static/8.png
 
-       hostnamectl set-hostname domain.com
+Start SQL Plus
 
-2.  Run the script, which will provision a dummy SSL certificate.
-
-3.  Once script completes, enable Python Certbot Apache plugin::
-
-       apt-get -y install python3-certbot-apache
-
-4.  Request a certificate using below::
-
-       certbot --apache --agree-tos --email hostmaster@domain.com --no-eff-email -d domain.com
-
-5. select the option "2: Redirect - Make all requests redirect to secure HTTPS access"::
-   
-6. Restart Apache
-
-
-
-Welcome Page
-------------
-
-Once installation completes, navigate to the IP or hostname of your server.
-
-You should see a page as below:
-
-.. image:: OpenTileServer-WelcomeApp.png
-
-
-Click on both the OpenLayer and Leaflet Examples and check your installation is rendering
-
-Note: Zoom is automatically set on the leaflet demo application.  On the OpenLayers demo application you will need to zoom to the area.
-
-
-Produced by AcuGIS 
-
-https://www.acugis.com/opentileserver
-
-Cited, Inc. 
-
-Wilmington, Delaware
-
-https://citedcorp.com
-
-
+.. image:: _static/9.png
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/AcuGIS/OpenTileServer/issues
-- Source Code: github.com/AcuGIS/OpenTileServer
+- Issue Tracker: github.com/cited/Oracle-Instant-Client/issues
+- Source Code: github.com/AcuGIS/Oracle-Instant-Client
 
 Support
 -------
