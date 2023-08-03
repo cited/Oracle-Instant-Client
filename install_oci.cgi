@@ -19,15 +19,6 @@ sub download_otn{
 	#my $tmpfile = "/tmp/instantclient-$name-linux.x64-$ver.zip";
 	&error_setup(&text('install_err3', $url));
 
-	#'testSessionCookie=Enabled'.
-	#'; oraclelicense=accept-ic_linuxx8664-cookie'.
-	#"; s_sq=oracleotnlive%2Coracleglobal%3D%2526pid%253Dotn%25253Aen-us%25253A%25252Ftopics%25252Flinuxx86-64soft-$page_number.html%2526pidt%253D1%2526oid%253Dfunctiononclick(event)%25257BacceptAgreement(window.self)%25253B%25257D%2526oidt%253D2%2526ot%253DRADIO".
-	#my $cookie_value =	"gpw_e24=http%3A%2F%2Fwww.oracle.com%2Ftechnetwork%2Ftopics%2Flinuxx86-64soft-$page_number.html".
-	#					'; oraclelicense=accept-securebackup-cookie'.
-	#					'; s_cc=true'.
-	#					"; s_nr=$time_limit";
-	#print "Cookie: $cookie_value<br>";
-	#my %cookie_headers = ('Cookie'=> $cookie_value);
 	&http_download("download.oracle.com", 443, "/otn_software/linux/instantclient/$ver2/instantclient-$name-linux.x64-".$ver."dbru.zip",
 					$tmpfile, \$error, undef, 1);#, undef, undef, 0, 0, 1, \%cookie_headers);
 	return $tmpfile;
