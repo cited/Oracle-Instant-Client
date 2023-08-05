@@ -58,7 +58,7 @@ Please report issue here
 Copyright
 ---------
 
-* Copyright AcuGIS, 2020
-* Copyright Cited, Inc., 2020
+* Copyright AcuGIS, 2023
+* Copyright Cited, Inc., 2023
 
 
