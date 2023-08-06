@@ -10,7 +10,7 @@ sub get_packages_yum{
 	my $cmd_err='';
 	local $out = &execute_command("yum search php", undef, \$cmd_out, \$cmd_err, 0, 0);
 
-	if($cmd_err ne ""){
+	if($out != 0){
 		&error("Error: yum: $cmd_err");
 		return 1;
 	}
