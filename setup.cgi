@@ -6,45 +6,6 @@ require '../webmin/webmin-lib.pl';	#for OS detection
 foreign_require('software', 'software-lib.pl');
 foreign_require('apache', 'apache-lib.pl');
 
-sub check_pg_ext_deps{
-	my $pg_ver = $_[0];
-	my @ext_pkgs;
-
-	if( ($osinfo{'os_type'} =~ /debian/i)){
-		@ext_pkgs = ("postgresql-$pg_ver-pgrouting-scripts", "postgresql-$pg_ver-pgrouting");
-		if($pg_ver <= 13){
-			push(@ext_pkgs, "postgresql-$pg_ver-postgis-2.5-scripts");
-		}else{
-			# from PG 14 postgis is >= 3
-			push(@ext_pkgs, "postgresql-$pg_ver-postgis-3-scripts");
-		}
-	}elsif( $osinfo{'os_type'} =~ /redhat/i){
-		my $pg_ver2;
-		($pg_ver2 = $pg_ver) =~ s/\.//;
-		my $postgis_pkg = get_postgis_pkg_name($pg_ver);
-		@ext_pkgs = ($postgis_pkg, "pgrouting_$pg_ver2", "postgresql$pg_ver2-contrib");
-	}
-
-	my @pkg_missing;
-	foreach my $pkg (@ext_pkgs){
-		my @pinfo = software::package_info($pkg);
-		if(!@pinfo){
-			push(@pkg_missing, $pkg);
-		}
-	}
-
-	if(@pkg_missing){
-		my $url_pkg_list = '';
-		foreach my $pkg (@pkg_missing){
-			$url_pkg_list .= '&u='.&urlize($pkg);
-		}
-		my $pkg_list = join(', ', @pkg_missing);
-
-		print "<p>Warning: Missing PG package dependencies - $pkg_list packages are not installed. Install them manually or ".
-				"<a href='../package-updates/update.cgi?mode=new&source=3${url_pkg_list}&redir=%2E%2E%2Foci%2Fsetup.cgi&redirdesc=OCI%2CSetup'>click here</a> to have them installed.</p>";
-	}
-}
-
 sub setup_checks{
 
 	my %osinfo = &detect_operating_system();
