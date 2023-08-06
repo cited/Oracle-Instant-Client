@@ -8,6 +8,13 @@
 
 Installs Oracle Instant Client Basic, jdbc, odbc, sdk, sqlplus, and tools packages
 
+
+# Supported Operating Systems
+
+Ubuntu 22
+Rocky Linux 9
+Alma Linux 9
+
 # Install via Webmin
 
 Webmin->Webmin Configuration->Webmin Modules->From ftp or http URL
