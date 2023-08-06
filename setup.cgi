@@ -12,7 +12,7 @@ sub setup_checks{
 	my @pkg_deps;
 	if(	( $osinfo{'real_os_type'} =~ /rocky/i) or	#Rocky
 			($osinfo{'real_os_type'} =~ /centos/i)	){	#CentOS
-		@pkg_deps = ('php', 'php-devel', 'php-cgi', 'php-cli', 'httpd', 'libaio', 'make', 'gcc')
+		@pkg_deps = ('php', 'php-devel', 'mod_fcgid', 'php-cli', 'httpd', 'libaio', 'make', 'gcc')
 
 	}elsif( ($osinfo{'real_os_type'} =~ /ubuntu/i) or
 					($osinfo{'real_os_type'} =~ /debian/i) 	){	#ubuntu or debian
