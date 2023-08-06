@@ -9,6 +9,15 @@ foreign_require('apache', 'apache-lib.pl');
 sub setup_checks{
 
 	my %osinfo = &detect_operating_system();
+	
+	if( $osinfo{'os_type'} =~ /redhat/i){	#other redhat
+
+		@pinfo = software::package_info('epel-release', undef, );
+		if(!@pinfo){
+			print "<p>Info: You can install epel-release to have more PHP packages. Install it manually or ".
+					"<a href='../software/install_pack.cgi?source=3&update=epel-release&return=%2E%2E%2Foci%2F&returndesc=Oracle%20PHP&caller=oci'>click here</a> to have it downloaded and installed.</p>";
+		}
+	}
 	my @pkg_deps;
 	if(	( $osinfo{'real_os_type'} =~ /rocky/i) or	#Rocky
 			($osinfo{'real_os_type'} =~ /centos/i)	){	#CentOS
