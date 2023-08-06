@@ -27,10 +27,18 @@ Go to Servers->Apache Tomcat to complete set up using the setup Wizard (you may 
 
 # Install via Script
 
-As Root:
+Ubuntu (as root):
 
 ```bash
-wget https://raw.githubusercontent.com/cited/Oracle-Instant-Client/master/scripts/pre-install.sh
+wget https://raw.githubusercontent.com/cited/Oracle-Instant-Client/master/scripts/ubuntu.sh
+chmod +x pre-install.sh
+./pre-install.sh
+```
+
+Rocky Linux or Alma Linux (as root):
+
+```bash
+wget https://raw.githubusercontent.com/cited/Oracle-Instant-Client/master/scripts/alma-rocky.sh
 chmod +x pre-install.sh
 ./pre-install.sh
 ```
