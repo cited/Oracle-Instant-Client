@@ -53,6 +53,8 @@ sub install_oci8{
 		$oci_ver = '3.3.0';
 	}elsif(($php_ver[0] == 8) and ($php_ver[1] == 1)){
 		$oci_ver = '3.2.1';
+	}elsif(($php_ver[0] == 8) and ($php_ver[1] == 0)){
+		$oci_ver = '3.0.1';
 	}elsif($php_ver[0] == 7){
 		$oci_ver = '2.1.4';
 	}elsif($php_ver[0] == 5){
