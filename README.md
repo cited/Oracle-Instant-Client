@@ -12,7 +12,9 @@ Installs Oracle Instant Client Basic, jdbc, odbc, sdk, sqlplus, and tools packag
 # Supported Operating Systems
 
 Ubuntu 22
+
 Rocky Linux 9
+
 Alma Linux 9
 
 # Install via Webmin
