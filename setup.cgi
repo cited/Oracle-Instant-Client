@@ -47,24 +47,10 @@ sub check_pg_ext_deps{
 
 sub setup_checks{
 
-	my @pinfo = software::package_info('haveged', undef, );
-	if(!@pinfo){
-		my %osinfo = &detect_operating_system();
-		if( $osinfo{'real_os_type'} =~ /centos/i){	#CentOS
-			@pinfo = software::package_info('epel-release', undef, );
-			if(!@pinfo){
-				print "<p>Warning: haveged needs epel-release. Install it manually or ".
-						"<a href='../package-updates/update.cgi?mode=new&source=3&u=epel-release&redir=%2E%2E%2Foci%2Fsetup.cgi&redirdesc=Setup'>click here</a> to have it downloaded and installed.</p>";
-			}
-		}
-		print "<p>Warning: haveged package is not installed. Install it manually or ".
-			  "<a href='../package-updates/update.cgi?mode=new&source=3&u=haveged&redir=%2E%2E%2Foci%2Fsetup.cgi&redirdesc=Setup'>click here</a> to have it downloaded and installed.</p>";
-	}
-
 	my %osinfo = &detect_operating_system();
 	my @pkg_deps;
-	if(	( $osinfo{'real_os_type'} =~ /centos/i) or	#CentOS
-			($osinfo{'real_os_type'} =~ /fedora/i)	){	#Fedora
+	if(	( $osinfo{'real_os_type'} =~ /rocky/i) or	#Rocky
+			($osinfo{'real_os_type'} =~ /centos/i)	){	#CentOS
 		@pkg_deps = ('php', 'php-devel', 'php-cgi', 'php-cli', 'httpd', 'libaio1', 'make', 'gcc')
 
 	}elsif( ($osinfo{'real_os_type'} =~ /ubuntu/i) or
