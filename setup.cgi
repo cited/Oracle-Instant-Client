@@ -20,7 +20,8 @@ sub setup_checks{
 	}
 	my @pkg_deps;
 	if(	( $osinfo{'real_os_type'} =~ /rocky/i) or	#Rocky
-			($osinfo{'real_os_type'} =~ /centos/i)	){	#CentOS
+			($osinfo{'real_os_type'} =~ /centos/i)	or	#CentOS
+			($osinfo{'real_os_type'} =~ /alma/i)	){	#Alma Linux
 		@pkg_deps = ('php', 'php-devel', 'mod_fcgid', 'php-cli', 'httpd', 'libaio', 'make', 'gcc')
 
 	}elsif( ($osinfo{'real_os_type'} =~ /ubuntu/i) or
