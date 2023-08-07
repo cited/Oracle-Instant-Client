@@ -32,11 +32,15 @@ Step 5: Install the module (Rocky/Alma)::
 Wizard
 -------   
 
-Once the module is installed, go to Servers >> Oracle Instant Client and click through the Wizard
+Once the module is installed, go to Servers >> Oracle Instant Client
 
-.. image:: _static/5.png
+.. image:: _static/1.png
 
-Select the packages to install
+Click throught the Set Up Wizard
+
+.. image:: _static/Setup-2.png
+
+Select the package(s) you want to install
 
 .. image:: _static/6.png
 
@@ -55,6 +59,28 @@ If you selected SQLPlus, you can test functionality via the Webmin terminal app:
 Start SQL Plus
 
 .. image:: _static/9.png
+
+
+PHP OCI
+-----------------
+
+PHP oci funcationality can be tested using below
+
+.. code-block:: console
+
+    <?php
+      
+      $c = @oci_connect("username", "password", "hostname/servicename(pdb)");
+      if (!$c) {
+        print "Sorry! The connection to the database failed. Please try again later.";
+        die();
+      }
+      else {
+        print "Congrats! You've connected to an Oracle database!";
+        oci_close($c);
+      }
+    ?>
+
 
 Contribute
 ----------
