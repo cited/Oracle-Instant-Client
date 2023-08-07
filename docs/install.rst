@@ -15,7 +15,7 @@ Step 1: Get the repo from Github::
 
 Step 2: Change name::
 
-    mv webmin_oci-master oci
+    mv Oracle-Instant-Client oci
 
 Step 4 Create the Webmin wbm.gz file::
 
