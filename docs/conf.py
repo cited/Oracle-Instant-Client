@@ -17,8 +17,7 @@ here = Path(__file__).parent.resolve()
 
 project = 'Oracle Instant Client'
 copyright = '2023, Cited Inc.'
-# author = 'Cited Inc.'
-author = __author__
+author = 'Cited''
 
 # release = '0.1'
 # version = '0.1.0'
