@@ -3,11 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
    
-OpenTileServer
+Oracle Instant Client
 ==================================================
 
-
-.. image:: OpenTileServer-WelcomeApp.png
 
 .. toctree::
    :caption: Getting Started
