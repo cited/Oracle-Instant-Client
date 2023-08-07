@@ -10,11 +10,6 @@ Contents
    :maxdepth: 1
 
    install
-   components
-   
+   components   
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
