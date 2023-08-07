@@ -1,8 +1,8 @@
 
-Installation and Usage
+Installation
 ===========================
 
-This module is installing and configuring Oracle Instant Client
+This module is for installing and configuring Oracle Instant Client
 
 The module can be used on a new or existing Webmin installation
 
@@ -17,7 +17,7 @@ Step 2: Change name::
 
     mv webmin_oci-master oci
 
-Step 4 Create the Webmin tar.gz file::
+Step 4 Create the Webmin wbm.gz file::
 
     tar -cvzf oci.wbm.gz oci/
 
