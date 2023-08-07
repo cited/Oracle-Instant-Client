@@ -8,9 +8,7 @@ Contents
    :maxdepth: 1
 
    install
-   USAGE
-   my_package
-   changelog_link
+   
 
 Indices and tables
 ==================
