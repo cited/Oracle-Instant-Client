@@ -12,7 +12,7 @@ from sphinx.locale import _
 from sphinx_rtd_theme import __version__
 
 
-project = u'JRI Viewer'
+project = u'Oracle Instant Client'
 copyright = u'2023, Cited, Inc.'
 slug = re.sub(r'\W+', '-', project.lower())
 version = __version__
@@ -26,8 +26,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
-    'sphinxcontrib.httpdomain',
-    'sphinx_rtd_theme',
+    'sphinxcontrib.httpdomain'
 ]
 
 templates_path = ['_templates']
@@ -51,7 +50,7 @@ html_theme_options = {
     'display_version': True
 }
 html_theme_path = ["_themes", ]
-html_logo = "_static/jri-publihser-top-icon.fw.png"
+# html_logo = "_static/jri-publihser-top-icon.fw.png"
 html_show_sourcelink = True
 
 htmlhelp_basename = slug
