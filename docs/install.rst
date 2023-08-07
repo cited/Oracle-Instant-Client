@@ -21,9 +21,13 @@ Step 4 Create the Webmin wbm.gz file::
 
     tar -cvzf oci.wbm.gz oci/
 
-Step 5: Install the module::
+Step 5: Install the module (Ubuntu)::
 
     /usr/share/webmin/install.pl oci.wbm.gz
+
+Step 5: Install the module (Rocky/Alma)::
+
+    /usr/libexec/webmin/install.pl oci.wbm.gz
 
 Wizard
 -------   
