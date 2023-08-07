@@ -1,13 +1,18 @@
-# RTD Tutorial
+============
+Installation
+============
 
-RTD Tutorial template
+The preferred method is installing via GIT.
 
----------------
+Install the package with GIT::
 
-## General
+    $ git clone https://github.com/cited/Tomcat-Webmin-Module
 
-Bla bla
+    $ mv Tomcat-Webmin-Module tomcat
 
-## Usage
+    $ tar -cvzf tomcat.wbm.gz tomcat/
+    
+    
+Upload from Webmin->Webmin Configuration->Webmin Modules
 
-See [USAGE](USAGE.md) file
+Go to Servers->Apache Tomcat (you may need to refresh page)
