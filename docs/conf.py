@@ -18,9 +18,9 @@ exec(open(here / '..' / 'my_package' / 'version.py').read())
 
 # -- Project information
 
-project = 'Brainelectronics RTD Tutorial'
-copyright = '2022, brainelectronics'
-# author = 'brainelectronics'
+project = 'Oracle Instant Client'
+copyright = '2023, Cited Inc.'
+# author = 'Cited Inc.'
 author = __author__
 
 # release = '0.1'
