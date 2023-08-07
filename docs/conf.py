@@ -13,9 +13,6 @@ from pathlib import Path
 sys.path.insert(0, os.path.abspath('../'))
 here = Path(__file__).parent.resolve()
 
-# load elements of version.py
-exec(open(here / '..' / 'my_package' / 'version.py').read())
-
 # -- Project information
 
 project = 'Oracle Instant Client'
