@@ -7,92 +7,25 @@ The dashboard contains links to Oracle Instant Client installer and PHP installe
 PHP
 ---------------------
 
-Step 1: Get the repo from Github::
+Click the PHP tab:
 
-    git clone https://github.com/cited/Oracle-Instant-Client.git
+.. image:: _static/php-1.png
 
-Step 2: Change name::
+Here, you can add/remove/update any listed PHP packages
 
-    mv Oracle-Instant-Client oci
-
-Step 4 Create the Webmin wbm.gz file::
-
-    tar -cvzf oci.wbm.gz oci/
-
-Step 5: Install the module (Ubuntu)::
-
-    /usr/share/webmin/install-module.pl oci.wbm.gz
-
-Step 5: Install the module (Rocky/Alma)::
-
-    /usr/libexec/webmin/install-module.pl oci.wbm.gz
-
-Wizard
--------   
-
-Once the module is installed, go to Servers >> Oracle Instant Client
-
-.. image:: _static/1.png
-
-Click throught the Set Up Wizard
-
-.. image:: _static/Setup-2.png
-
-Select the package(s) you want to install
-
-.. image:: _static/6.png
-
-Once completed, the panel should look like below:
-
-.. image:: _static/7.png
+.. image:: _static/php-2.png
 
 
-SQL Plus
------------------
 
-If you selected SQLPlus, you can test functionality via the Webmin terminal app:
+php-2.png
 
-.. image:: _static/8.png
+Instant Client
+---------------------
 
-Start SQL Plus
+Click the Oracle Instant Client tab:
 
-.. image:: _static/9.png
+.. image:: _static/oci-tab.png
 
+Here, you can add/remove/update any listed  Oracle Instant Client packages
 
-PHP OCI
------------------
-
-PHP oci funcationality can be tested using below
-
-.. code-block:: console
-
-    <?php
-      
-      $c = @oci_connect("username", "password", "hostname/servicename(pdb)");
-      if (!$c) {
-        print "Sorry! The connection to the database failed. Please try again later.";
-        die();
-      }
-      else {
-        print "Congrats! You've connected to an Oracle database!";
-        oci_close($c);
-      }
-    ?>
-
-
-Contribute
-----------
-
-- Issue Tracker: github.com/cited/Oracle-Instant-Client/issues
-- Source Code: github.com/AcuGIS/Oracle-Instant-Client
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
-
-License
--------
-
-The project is licensed under the BSD license.
+.. image:: _static/oci-tab-main.png
