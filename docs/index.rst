@@ -7,7 +7,7 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   README
+   install
    USAGE
    my_package
    changelog_link
