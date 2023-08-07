@@ -23,11 +23,11 @@ Step 4 Create the Webmin wbm.gz file::
 
 Step 5: Install the module (Ubuntu)::
 
-    /usr/share/webmin/install.pl oci.wbm.gz
+    /usr/share/webmin/install-module.pl oci.wbm.gz
 
 Step 5: Install the module (Rocky/Alma)::
 
-    /usr/libexec/webmin/install.pl oci.wbm.gz
+    /usr/libexec/webmin/install-module.pl oci.wbm.gz
 
 Wizard
 -------   
