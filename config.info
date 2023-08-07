@@ -1,4 +1,1 @@
 oci_config=Path to the Oracle Instant Client Webmin module config file,8
-dep_packages=Dependency packages,0
-pkg_php=PHP package name,0
-pkg_php_dev=PHP package that provides phpize,0
