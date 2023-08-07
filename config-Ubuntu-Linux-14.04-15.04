@@ -1,4 +1,0 @@
-oci_config=/etc/webmin/oci/config
-pkg_php=php5
-pkg_php_dev=php5-dev
-dep_packages=php5-cgi php5-cli apache2 libaio1
