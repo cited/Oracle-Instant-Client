@@ -1,6 +1,6 @@
-============
-Installation
-============
+
+## Installation
+
 
 The preferred method is installing via GIT.
 
