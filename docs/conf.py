@@ -19,10 +19,9 @@ project = 'Oracle Instant Client'
 copyright = '2023, Cited Inc.'
 author = 'Cited''
 
-# release = '0.1'
-# version = '0.1.0'
-version = __version__
-release = version
+release = '0.1'
+version = '0.1.0'
+
 
 # -- General configuration
 
